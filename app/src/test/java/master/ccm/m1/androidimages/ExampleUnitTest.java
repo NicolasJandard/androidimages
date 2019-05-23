@@ -1,4 +1,4 @@
-package master.ccm.m1.projetandroid;
+package master.ccm.m1.androidimages;
 
 import org.junit.Test;
 

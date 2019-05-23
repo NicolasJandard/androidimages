@@ -1,4 +1,4 @@
-package master.ccm.m1.projetandroid;
+package master.ccm.m1.androidimages;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ProjetAndroid</string>
+    <string name="app_name">Android Images CCM1</string>
+    <string name="button_download">Télécharger la sélection</string>
+    <string name="button_show">Afficher les images</string>
+    <string name="button_add_url">Ajouter une URL</string>
+    <string name="editText_add_url">URL</string>
 </resources>
