@@ -199,4 +199,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * APPLER LORSQUE L'UTILISATEUR CLIQUE SUR LE BOUTON AFFICHER LES IMAGES
+     * @param view
+     */
+    public void afficherListImages(View view) {
+        Intent i = new Intent(this, ImageListActivity.class);
+        startActivity(i);
+    }
 }
