@@ -105,16 +105,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void addUrl(View view) {
         EditText editTextAdd = findViewById(R.id.editText_add_url);
-        String contentToWrite = editTextAdd.getText().toString() + "\n";
-        if(URLUtil.isValidUrl(contentToWrite)) {
-            /*try {
+        String contentToWrite = "\n" + editTextAdd.getText().toString();
+        if(URLUtil.isValidUrl(editTextAdd.getText().toString())) {
+            try {
                 FileOutputStream outputStream = openFileOutput(getDefaultFilename(), Context.MODE_APPEND);
                 outputStream.write(contentToWrite.getBytes());
                 outputStream.close();
                 refreshListView();
             } catch (IOException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
         else {
             Toast.makeText(this, "L'URL n'est pas valide", Toast.LENGTH_LONG).show();

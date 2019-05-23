@@ -20,7 +20,7 @@ public class ImageListActivity extends AppCompatActivity {
     private GridView imageGrid;
     private ArrayList<Bitmap> bitmapList;
     private final static String PICTURES_DIR = "projetApp";
-    private final static  String cheminRepertoire = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath() + "/" + PICTURES_DIR + "/";
+    private final static String cheminRepertoire = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath() + "/" + PICTURES_DIR + "/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

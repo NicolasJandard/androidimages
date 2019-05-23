@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -38,18 +39,17 @@ public class IntentServiceImage extends IntentService {
     }
 
     private void downloadImage(String url) {
-        Uri uri = Uri.parse(url);
-        String filename = uri.getLastPathSegment();
+        String filename = url.substring(url.lastIndexOf("/") + 1);
 
         //On teste si le fichier que l'on veut télécharger existe déjà
-        File fileToDownload = new File(baseDirectory.getAbsolutePath() + filename);
+        File fileToDownload = new File(baseDirectory.getAbsolutePath() + File.separator + filename);
 
-        if(!fileToDownload.isFile()) {
+        if(!fileToDownload.exists()) {
             //Récupère le service de download d'Android
             DownloadManager downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 
             //Crée la requête de téléchargement selon l'url
-            uri = Uri.parse(url);
+            Uri uri = Uri.parse(url);
             DownloadManager.Request request = new DownloadManager.Request(uri);
 
             /* Gère les paramètres relatifs au fichier :
