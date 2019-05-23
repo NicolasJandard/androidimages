@@ -49,7 +49,7 @@ public class IntentServiceImage extends IntentService {
             DownloadManager downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 
             //Crée la requête de téléchargement selon l'url
-            Uri uri = Uri.parse(url);
+            uri = Uri.parse(url);
             DownloadManager.Request request = new DownloadManager.Request(uri);
 
             /* Gère les paramètres relatifs au fichier :
